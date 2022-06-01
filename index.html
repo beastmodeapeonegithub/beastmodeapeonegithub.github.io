@@ -133,13 +133,14 @@ position:relative;
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-name: bounce-2;
-        animation-timing-function: ease;animation-direction: alternate;
+        animation-timing-function: ease;
+      animation-direction: alternate;
     }
     @keyframes bounce-2 {
-        0%   { transform: translateY(0) translateX(-24px); }
-        33.3%  { transform: translateY(-24px) translateX(0); }
-        66.6% { transform: translateY(0) translateX(24px); }
-100%   { transform: translateY(0) translateX(-24px); }
+        0%   { transform: translateX(-24px) translateY(24px); }
+        33%  { transform: translateX(0px) translateY(-24px) ; }
+        66%  { transform: translateX(24px) translateY(24px) ; }
+        100%  { transform: translateX(-24px) translateY(24px); }
     }   
 
 
@@ -515,6 +516,10 @@ font-weight:500;
 }
 
 @media (min-width: 992px){
+
+.col-hero-image{
+overflow:visible !important;
+}
 	/*
 	.hero-container{
     height: calc(100vh - 76px);
@@ -758,7 +763,7 @@ background: #FF650D;
   <span class="front">Join Our Telegram</span>
 </button></a>
 </div>
-</div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" style="position:relative;">
+</div><div class="overflow-hidden col-hero-image col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5 px-0" style="position:relative;">
 
 <div class="hero-img-wrapper w-100" data-aos="fade-left"><img class="hero-img hero-image img-fluid w-100" src="images/green-goblin-1.png" style="background:transparent !important;    filter: drop-shadow(0 0 10px rgb(40 184 15 / 100%));"></div>
 
