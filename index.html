@@ -41,7 +41,14 @@
 		 });
 </script>
 <style type="text/css">
-
+@font-face {
+  font-family: font1;
+  src: url('webfonts/wolfsbane2.woff');
+}
+    @font-face {
+  font-family: font2;
+  src: url('webfonts/wolfsbane2acad.woff');
+}
 body{
 background:#1A780A;
 color:#FFFFFF;
@@ -231,11 +238,11 @@ font-size:1em;
 }
 
 .section-title{
-font-size:2.75em;
+font-size:4em;
 font-weight:700;
-font-family:'Orbitron';
+font-family:'font1';
 /*text-shadow: 10px #2C174F;*/
-    letter-spacing:0.05em;
+    letter-spacing:0.1em;
     text-shadow: none !important;
    color:#D800F6 !important;
     text-shadow: -1px 0 #ED8DFB, 0 1px #ED8DFB, 1px 0 #ED8DFB, 0 -1px #ED8DFB !important;
@@ -1063,6 +1070,7 @@ AOS.init({
 
 });
 </script>
+
 
 
 
