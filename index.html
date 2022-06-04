@@ -183,22 +183,46 @@ font-size:1.25em;
 text-align: center !important;
 }
 
+.hero-container .buy-button-border{
+padding:4px;border-radius:0;border:2px solid #D800F6;background:transparent;animation: gradient-border 12s ease infinite;
+}
+    
+@keyframes gradient-border {
+	0% {
+		border:2px solid #D800F6;
+	}
+	50% {
+		border:2px solid #FA9F1B;
+	}
+	100% {
+		border:2px solid #D800F6;
+	}
+}
+    
 .hero-container .buy-button{
 color: #FFFFFF;
 position: relative;
     border:0;
 z-index: 1;
 overflow: hidden;
-border-radius:1em;
+border-radius:0em;
 padding:16px 20px;
 font-weight:600;
 letter-spacing:0px;
 font-size:1em;
-background-color: #37F713;
-    background-image: linear-gradient(
--234deg
-, rgba(216, 0, 246, 0.5) 0%, rgba(216, 0, 246, 0.75) 100%);
-    box-shadow: 0 0 16px rgb(216 0 246 / 25%);
+ animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background: #D800F6;
+	}
+	50% {
+		background: #FA9F1B;
+	}
+	100% {
+		background: #D800F6;
+	}
 }
 
 .hero-container .buy-button:hover, .hero-container .buy-button:focus{
@@ -213,7 +237,7 @@ position: relative;
 z-index: 1;
 overflow: hidden;
 border: solid 2px #37F713;
-border-radius:1em;
+border-radius:0em;
 padding:16px 20px;
 font-weight:600;
 letter-spacing:0px;
@@ -245,10 +269,23 @@ font-family:'font1';
 /*text-shadow: 10px #2C174F;*/
     letter-spacing:0.1em;
     text-shadow: none !important;
-   color:#D800F6 !important;
-    text-shadow: -1px 0 #ED8DFB, 0 1px #ED8DFB, 1px 0 #ED8DFB, 0 -1px #ED8DFB !important;
+  animation: gradient-text 12s ease infinite;
 }
 
+@keyframes gradient-text {
+	0% {
+		color: #D800F6;
+	}
+	50% {
+		color: #FA9F1B;
+	}
+	100% {
+		color: #D800F6;
+	}
+}
+
+    
+    
 /* ---------------- */
 
 /* ABOUT SECTION */
@@ -260,6 +297,14 @@ background:#1A780A;
 .about-container{
 color:#FFFFFF;
 padding-bottom:0 !important;
+}
+
+.about-container .img-text{
+-webkit-mask-image: url(images/about.png);
+  mask-image: url(images/about.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+animation: gradient 12s ease infinite;
 }
 
 .about-container .about-title{
@@ -285,15 +330,42 @@ padding-top:0 !important;
 
 .features-container .tokenomics-title{
 }
-
+.features-container .img-text{
+-webkit-mask-image: url(images/features.png);
+  mask-image: url(images/features.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+animation: gradient 12s ease infinite;
+}
+    
 .features-container .tokenomics-description{
 }
 
-.features-container .tax-card{
- border:2px solid #ED8DFB;
-border-radius:1em;
-max-width:480px;
+    .features-container .tax-card-border{
+ border:2px solid #D800F6;
+animation: gradient-border 12s ease infinite;
 }
+    
+@keyframes gradient-border {
+	0% {
+		border:2px solid #D800F6;
+	}
+	50% {
+		border:2px solid #FA9F1B;
+	}
+	100% {
+		border:2px solid #D800F6;
+	}
+}
+    
+
+    .features-container .tax-card{
+ border:0px solid #ED8DFB;
+border-radius:0em;
+max-width:480px;
+animation: gradient 12s ease infinite;
+}
+    
 
 .features-container .tax-title{
 color: transparent;
@@ -339,15 +411,40 @@ font-weight: 700;
 
 .tokenomics-container .tokenomics-title{
 }
-
+.tokenomics-container .img-text{
+-webkit-mask-image: url(images/tokenomics.png);
+  mask-image: url(images/tokenomics.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+animation: gradient 12s ease infinite;
+}
 .tokenomics-container .tokenomics-description{
 }
 
-.tokenomics-container .tax-card{
- border:2px solid #ED8DFB;
-border-radius:1em;
-max-width:480px;
+.tokenomics-container .tax-card-border{
+ border:2px solid #D800F6;
+animation: gradient-border 12s ease infinite;
 }
+    
+@keyframes gradient-border {
+	0% {
+		border:2px solid #D800F6;
+	}
+	50% {
+		border:2px solid #FA9F1B;
+	}
+	100% {
+		border:2px solid #D800F6;
+	}
+}
+
+.tokenomics-container .tax-card{
+ border:0px solid #ED8DFB;
+border-radius:0em;
+max-width:480px;
+animation: gradient 12s ease infinite;
+}
+
 
 .tokenomics-container .tax-title{
 color: #FFFFFF;
@@ -423,11 +520,33 @@ margin-top:4px;
 .roadmap-container .roadmap-title{
     color:#FFFFFF;
 }
-
+.roadmap-container .img-text{
+-webkit-mask-image: url(images/roadmap.png);
+  mask-image: url(images/roadmap.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+animation: gradient 12s ease infinite;
+}
 .roadmap-container h4{
 color:#D800F6;
+    animation: gradient-text 12s ease infinite;
+}
+    
+    .roadmap-container path{
+animation: gradient-fill 12s ease infinite;
 }
 
+@keyframes gradient-fill {
+	0% {
+		fill: #D800F6;
+	}
+	50% {
+		fill: #FA9F1B;
+	}
+	100% {
+		fill: #D800F6;
+	}
+}
 /* ---------------- */
 
 /* SWAP SECTION */
@@ -440,7 +559,13 @@ color:#D800F6;
 color:#FFFFFF;
 }
 
-
+.swap-container .img-text{
+-webkit-mask-image: url(images/swap-here.png);
+  mask-image: url(images/swap-here.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+animation: gradient 12s ease infinite;
+}
 /* ---------------- */
 
     
@@ -454,6 +579,14 @@ background:#1A780A;
 color:#FFFFFF;
 }
 
+    .faq-container .img-text{
+-webkit-mask-image: url(images/faq.png);
+  mask-image: url(images/faq.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+animation: gradient 12s ease infinite;
+}
+    
 .faq-container .accordion-item {
     background-color: #115006;
     border: 1px solid rgba(0,0,0,.125);
@@ -705,11 +838,11 @@ background: #FF650D;
     
 </style>
 </head>
-<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+<body -easing="ease" -duration="1000" -delay="0" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
 
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark" id="#home">
-<div class="container" data-aos="fade">
+<div class="container" ="fade"="">
 <a class="navbar-brand d-flex flex-row justify-content-center align-items-center" href="/">
     <img class="img-fluid me-2" src="images/logo-1.png" style="max-height:34px;"><img class="img-fluid me-2" src="images/logo-text-1.png" style="max-height:34px;">
 <h1 class="mb-0 d-none" style="font-size:1em;font-weight:300;color:#C012D1"></h1></a>
@@ -745,27 +878,27 @@ background: #FF650D;
 <div class="hero-container container py-5 d-flex flex-column justify-content-center align-items-center">
 <div class="row">
 
-<div data-aos="fade-right" class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+<div ="fade-right"="" class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
 
 <h1 class="hero-title text-center">Welcome to<br><span style="/*color:#8CC912;text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;*/">Green Goblin</span> <span style="/* color:#015CFF;text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;*/">Inu!</span></h1>
 
 <p class="hero-description mt-1">Green Goblin Inu is a community-driven meme token dedicated for Green Goblin, an archenemy of Spider-Man.</p>
 <div class=" d-flex flex-column flex-sm-row ">
-<a type="button" class="buy-button btn btn-primary m-2 " href="https://pancakeswap.finance/swap?outputCurrency=" target="_blank" style="box-shadow: rgba(204, 29, 222, 0.25) 0px 6px 12px -2px, rgba(204, 29, 222, 0.3) 0px 3px 7px -3px !important;">Buy On Pancakeswap</a>
-<a type="button" class="telegram-button btn btn-primary m-2" href="https://t.me/" target="_blank" style="box-shadow: rgba(76, 232, 211, 0.25) 0px 6px 12px -2px, rgba(76, 232, 211, 0.3) 0px 3px 7px -3px !important;">Join Our Telegram</a>
+<a type="button" class="buy-button-border btn btn-primary m-2 " style="" href="https://pancakeswap.finance/swap?outputCurrency=" target="_blank"><div class="buy-button">Buy On Pancakeswap</div></a>
+<a type="button" class="telegram-button btn btn-primary m-2" href="https://t.me/" target="_blank" style="padding:20px 20px;box-shadow: rgba(76, 232, 211, 0.25) 0px 6px 12px -2px, rgba(76, 232, 211, 0.3) 0px 3px 7px -3px !important;">Join Our Telegram</a>
 </div>
 
 <div class="d-flex d-none flex-column flex-sm-row mt-3">
 
-<a href="https://pancakeswap.finance/swap?outputCurrency=" target="_blank"><button class="w-100 pushable buy-pushable-button" data-aos="fade">
+<a href="https://pancakeswap.finance/swap?outputCurrency=" target="_blank"><button class="w-100 pushable buy-pushable-button" ="fade"="">
   <span class="front">Buy On Pancakeswap</span>
-</button></a><a href="https://t.me/" target="_blank"><button class="w-100 pushable telegram-pushable-button ms-sm-3 mt-3 mt-sm-0" data-aos="fade">
+</button></a><a href="https://t.me/" target="_blank"><button class="w-100 pushable telegram-pushable-button ms-sm-3 mt-3 mt-sm-0" ="fade"="">
   <span class="front">Join Our Telegram</span>
 </button></a>
 </div>
 </div><div class="overflow-hidden col-hero-image col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5 px-0" style="position:relative;">
 
-<div class="hero-img-wrapper w-100" data-aos="fade-left"><img class="hero-img hero-image img-fluid w-100" src="images/green-goblin-1.png" style="background:transparent !important;    filter: drop-shadow(0 0 10px rgb(40 184 15 / 100%));"></div>
+<div class="hero-img-wrapper w-100" ="fade-left"=""><img class="hero-img hero-image img-fluid w-100" src="images/green-goblin-1.png" style="background:transparent !important;    filter: drop-shadow(0 0 10px rgb(40 184 15 / 100%));"></div>
 
 
 
@@ -777,13 +910,14 @@ background: #FF650D;
 
 <section id="about" class="section about-section">
 <div class="section-container about-container container py-5">
-<h2 class="d-none section-title about-title mt-4 text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">ABOUT</h2>
+<h2 class="d-none section-title about-title mt-4 text-center" ="fade"="" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">ABOUT</h2>
 
-<img class="img-fluid mx-auto d-block mt-4" src="images/about.png" style="max-height:100px;" data-aos="fade">
+<div class="img-text mx-auto d-block mt-4" style="width:178.17px;max-height:100px;height:100px;-webkit-mask-size: 100%;
+                                                                        mask-size: 100%;" ="fade"=""></div>
 
 <div class="row mt-4">
 <div class="col-12 text-center">
-<p class="section-description about-description" data-aos="fade">Green Goblin Inu is a community-driven meme token deployed on the Binance Smart Chain dedicated for Green Goblin, an archenemy of Spider-Man. A project backed by a strong team to deliver for investors with the goal of creating wealth and use case just by holding $MM. To achieve this vision, a detailed roadmap is laid out and the liquidity is locked initially to grant investors confidence in this project.<br><br>Norman Osborn is the founder of Oscorp Technologies. After experimenting on himself with an unstable chemical, Norman developed an alternate, evil personality known as Green Goblin. There is no shortage of great villains within the world of Spider-Man (poor Peter), but there are none more feared or deranged than Norman Osborn’s Green Goblin. Perhaps the very antithesis of New York’s resident Wall Crawler, the Goblin does not use his power for responsibility or the betterment of society, but instead to reign down chaos and destruction. Mr. Osborn was the result of his turbulent upbringing, which manifested itself in the villainous persona he would one day grow up to inhabit completely.</p>
+<p class="section-description about-description" ="fade"="">Green Goblin Inu is a community-driven meme token deployed on the Binance Smart Chain dedicated for Green Goblin, an archenemy of Spider-Man. A project backed by a strong team to deliver for investors with the goal of creating wealth and use case just by holding $MM. To achieve this vision, a detailed roadmap is laid out and the liquidity is locked initially to grant investors confidence in this project.<br><br>Norman Osborn is the founder of Oscorp Technologies. After experimenting on himself with an unstable chemical, Norman developed an alternate, evil personality known as Green Goblin. There is no shortage of great villains within the world of Spider-Man (poor Peter), but there are none more feared or deranged than Norman Osborn’s Green Goblin. Perhaps the very antithesis of New York’s resident Wall Crawler, the Goblin does not use his power for responsibility or the betterment of society, but instead to reign down chaos and destruction. Mr. Osborn was the result of his turbulent upbringing, which manifested itself in the villainous persona he would one day grow up to inhabit completely.</p>
     
 </div>
 </div>
@@ -791,41 +925,30 @@ background: #FF650D;
 </section>
 <section id="features" class="section features-section pt-5">
 <div class="section-container features-container container py-5">
-<h2 class="d-none section-title tokenomics-title text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">FEATURES</h2>
+<h2 class="d-none section-title tokenomics-title text-center" ="fade"="" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">FEATURES</h2>
 
 
-<img class="img-fluid mx-auto d-block mt-4" src="images/features.png" style="max-height:100px;" data-aos="fade"><div class="row mt-4 mb-4">
+<div class="img-text mx-auto d-block mt-4" style="width:249.23px;max-height:100px;height:100px;-webkit-mask-size: 100%;
+                                                                        mask-size: 100%;" ="fade"=""></div><div class="row mt-4 mb-4">
 
-<div class="col-12 col-lg-4 mb-4" data-aos="fade">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" style="background-color: #D800F6;
-    background-image: linear-gradient(
--234deg
-, rgba(216, 0, 246, 0.855) 0%, rgba(216, 0, 246, 0.796) 100%);
-    ">
+<div class="col-12 col-lg-4 mb-4" ="fade"="">
+<div class="tax-card-border p-1"><div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto">
 <img class="img-fluid mb-4" src="images/community-driven.png" style="max-height:100px;">
 <span class="tax-title-2 text-center mb-2">Community Driven</span><span class="tax-description text-center">Community focused and fair launched. The future of the project will depend on the community.</span>
-</div>
+    </div></div>
 </div>
 
 
-<div data-aos="fade" class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" style="background-color: #D800F6;
-    background-image: linear-gradient(
--234deg
-, rgba(216, 0, 246, 0.855) 0%, rgba(216, 0, 246, 0.796) 100%);
-    ">
+<div ="fade"="" class="col-12 col-lg-4 mb-4">
+<div class="tax-card-border p-1"><div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" style="">
 <img class="img-fluid mb-4" src="images/lp-lock.png" style="max-height:100px;">
 <span class="tax-title-2 text-center mb-2">Secured By Design</span><span class="tax-description text-center">Initial Liquidity Provided will be locked. This ensures that the project will not be rug-pulled.</span>
-</div>
-</div><div class="col-12 col-lg-4 mb-4" data-aos="fade">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" style="background-color: #D800F6;
-    background-image: linear-gradient(
--234deg
-, rgba(216, 0, 246, 0.855) 0%, rgba(216, 0, 246, 0.796) 100%);
-    ">
+    </div></div>
+</div><div class="col-12 col-lg-4 mb-4" ="fade"="">
+<div class="tax-card-border p-1"><div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" style="">
 <img class="p-1 img-fluid mb-4 " src="images/anti-whale.png" style="max-height:100px;">
 <span class="tax-title-2 text-center mb-2">Safe and Whale-Proof</span><span class="tax-description text-center">Sells are restricted to less than 4% of the total supply to reduce swing-trading and break whales' control.</span>
-</div>
+    </div></div>
 </div>
 
 
@@ -836,12 +959,13 @@ background: #FF650D;
 
 <section id="tokenomics" class="section tokenomics-section">
 <div class="section-container tokenomics-container container py-5">
-<h2 class="d-none mt-4 section-title tokenomics-title text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">TOKENOMICS</h2>
+<h2 class="d-none mt-4 section-title tokenomics-title text-center" ="fade"="" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">TOKENOMICS</h2>
 
-<img class="img-fluid mx-auto d-block mt-4" src="images/tokenomics.png" style="max-height:100px;" data-aos="fade">
+<div class="img-text mx-auto d-block mt-4" style="width:325.88px;max-height:100px;height:100px;-webkit-mask-size: 100%;
+                                                                        mask-size: 100%;" ="fade"=""></div>
 <div class="row">
 <div class="col-12">
-                       <table class="table table-striped tokenomics-info-table mt-4 mb-4 mx-auto" data-aos="fade">
+                       <table class="table table-striped tokenomics-info-table mt-4 mb-4 mx-auto" ="fade"="">
 					<tbody><tr>
 						<td style="font-weight:500;">Token Name</td>
 						<td style="font-weight:300;text-align: right;">Green Goblin Inu</td>
@@ -865,25 +989,17 @@ background: #FF650D;
 <div class="row mb-4">
 
 <div class="col-12 col-lg-4 mb-4 ms-auto">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="background-color: #D800F6;
-    background-image: linear-gradient(
--234deg
-, rgba(216, 0, 246, 0.855) 0%, rgba(216, 0, 246, 0.796) 100%);
-    ">
+<div class="tax-card-border p-1"><div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" ="fade"="" style="">
 <span class="tax-title text-center mb-4">6%</span>
 <span class="tax-title-2 text-center mb-2">Liquidity Pool</span><span class="tax-description text-center">6% of every transaction is transformed into liquidity. It's automatic and helps create a price floor.</span>
-</div>
+    </div></div>
 </div>
 
 <div class="col-12 col-lg-4 mb-4 me-auto">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="background-color: #D800F6;
-    background-image: linear-gradient(
--234deg
-, rgba(216, 0, 246, 0.855) 0%, rgba(216, 0, 246, 0.796) 100%);
-    ">
+<div class="tax-card-border p-1"><div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" ="fade"="" style="">
 <span class="tax-title text-center mb-4">6%</span>
 <span class="tax-title-2 text-center mb-2">Marketing</span><span class="tax-description text-center">6% of every transaction is taken and will be used for enhancements, operations, and marketing of the project.</span>
-</div>
+    </div></div>
 </div>
 	
 	
@@ -897,11 +1013,12 @@ background: #FF650D;
 <section id="roadmap" class="section roadmap-section">
 <div class="section-container roadmap-container container py-5">
 <div class="text-center">
-<h2 class="d-none section-title roadmap-title mt-4" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">ROADMAP</h2><img class="img-fluid mx-auto d-block mt-4" src="images/roadmap.png" style="max-height:100px;" data-aos="fade">
+<h2 class="d-none section-title roadmap-title mt-4" ="fade"="" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">ROADMAP</h2><div class="img-text mx-auto d-block mt-4" style="width:265.98px;max-height:100px;height:100px;-webkit-mask-size: 100%;
+                                                                        mask-size: 100%;" ="fade"=""></div>
 <div class="row mt-4 mb-4">
 <div class="col-12 col-lg-4 text-center py-3">
-<h4 data-aos="fade" class="aos-init">PHASE 1</h4>
-<ul class="list-unstyled text-small text-center mt-3" data-aos="fade">
+<h4 ="fade"="" class="aos-init">PHASE 1</h4>
+<ul class="list-unstyled text-small text-center mt-3" ="fade"="">
 <li>Telegram and Twitter Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#D800F6" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
 <li>Initial Marketing Campaign<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#D800F6" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
 <li>Pancakeswap Fair Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#D800F6" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
@@ -910,8 +1027,8 @@ background: #FF650D;
 </ul>
 </div>
 <div class="col-12 col-lg-4 text-center py-3">
-<h4 data-aos="fade" class="aos-init">PHASE 2</h4>
-<ul class="list-unstyled text-small text-center mt-3" data-aos="fade">
+<h4 ="fade"="" class="aos-init">PHASE 2</h4>
+<ul class="list-unstyled text-small text-center mt-3" ="fade"="">
 <li>Community Shilling</li>
 <li>Coin Listing Sites</li>
 <li>Telegram and Twitter Calls</li>
@@ -920,8 +1037,8 @@ background: #FF650D;
 </ul>
 </div>
 <div class="col-12 col-lg-4 text-center py-3">
-<h4 data-aos="fade" class="aos-init">PHASE 3</h4>
-<ul class="list-unstyled text-small text-center mt-3" data-aos="fade">
+<h4 ="fade"="" class="aos-init">PHASE 3</h4>
+<ul class="list-unstyled text-small text-center mt-3" ="fade"="">
 <li>Merchandise Launch</li>
 <li>Staking Platform Launch</li>
 <li>Swap Platform Launch</li>
@@ -946,12 +1063,13 @@ background: #FF650D;
 </div>
 </section><section id="swap" class="section swap-section">
 <div class="section-container swap-container container py-5">
-<h2 class="d-none mt-4 section-title swap-title text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">SWAP HERE</h2>
-<img class="img-fluid mx-auto d-block mt-4" src="images/swap-here.png" style="max-height:100px;" data-aos="fade">
+<h2 class="d-none mt-4 section-title swap-title text-center" ="fade"="" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">SWAP HERE</h2>
+<div class="img-text mx-auto d-block mt-4" style="width:288px;max-height:100px;height:100px;-webkit-mask-size: 100%;
+                                                                        mask-size: 100%;" ="fade"=""></div>
 
 <div class="row mt-4 mb-4">
 
-    <div class="col-12"><iframe class="d-block mx-auto" src="https://poocoin.app/embed-swap?outputCurrency=" height="480" style="border-radius:12px;max-width:400px;width:100%;" data-aos="fade"></iframe></div>
+    <div class="col-12"><iframe class="d-block mx-auto" src="https://poocoin.app/embed-swap?outputCurrency=" height="480" style="border-radius:12px;max-width:400px;width:100%;" ="fade"=""></iframe></div>
 
 
 	
@@ -964,12 +1082,13 @@ background: #FF650D;
 
 <section id="faq" class="section faq-section">
 <div class="section-container faq-container container py-5">
-<h2 class="d-none mt-4 section-title faq-title text-center" data-aos="fade" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">FAQ</h2>
-<img class="img-fluid mx-auto d-block mt-4" src="images/faq.png" style="max-height:100px;" data-aos="fade">
+<h2 class="d-none mt-4 section-title faq-title text-center" ="fade"="" style="color:#FFFFFF;text-shadow: -1px 0 #FFD70D, 0 1px #FFD70D, 1px 0 #FFD70D, 0 -1px #FFD70D;">FAQ</h2>
+<div class="img-text mx-auto d-block mt-4" style="width:105.58px;max-height:100px;height:100px;-webkit-mask-size: 100%;
+                                                                        mask-size: 100%;" ="fade"=""></div>
 
 <div class="row mb-4 mt-4">
 
-<div class="col-12" data-aos="fade">
+<div class="col-12" ="fade"="">
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -1067,13 +1186,13 @@ AOS.init({
   startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
   initClassName: 'aos-init', // class applied after initialization
   animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  useClassNames: false, // if true, will add content of `` as classes on scroll
   disableMutationObserver: false, // disables automatic mutations' detections (advanced)
   debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
   throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
   
 
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  // Settings that can be overridden on per-element basis, by `-*` attributes:
   offset: 0, // offset (in px) from the original trigger point
   delay: 0, // values from 0 to 3000, with step 50ms
   duration: 1000, // values from 0 to 3000, with step 50ms
@@ -1084,6 +1203,7 @@ AOS.init({
 
 });
 </script>
+
 
 
 
